@@ -52,10 +52,11 @@ function chartIt(json) {
     .domain(tempThresholdDomain)
     .range(tempColors)
 
-  const svg = d3.select('div#container')
+  const svg = d3.select('div#chart')
     .append('svg')
-    .attr('preserveAspectRation', 'xMinYMin meet')
+    .attr('preserveAspectRatio', 'xMinYMin meet')
     .attr('viewBox', '0 0 ' + w + ' ' + h)
+    .classed('svg-content', true)
 
   const tooltip = d3.select('body')
     .append('div')
